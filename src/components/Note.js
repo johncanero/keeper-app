@@ -1,7 +1,7 @@
 const Note = () => {
   return (
     <div className="note">
-        <h3>This is the note title</h3>
+        <h1>This is the note title</h1>
         <p>This is the note content</p>
     </div>
   )
