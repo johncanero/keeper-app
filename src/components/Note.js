@@ -16,7 +16,7 @@ const Note = () => {
   // Map Function
   const notesCard = (notes) => {
       return ( <Card 
-          key={notes.id}
+          key={notes.key}
           title={notes.title}
           content={notes.content}
       />
@@ -31,4 +31,6 @@ const Note = () => {
   )
 }
 
-export default Note
+export default Note;
+
+console.log(notes);
