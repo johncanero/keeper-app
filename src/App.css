@@ -21,7 +21,7 @@ body {
 
 /* header */
 header {
-  background-color: #f5ba13;
+  background-color: #2aedffea;
   margin: auto -16px;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -29,6 +29,7 @@ header {
 
 header h1 {
   color: #fff;
+  text-shadow: 1px 3px 3px #7c02ff97;
   font-family: "McLaren", cursive;
   font-weight: 200;
 }
@@ -52,13 +53,15 @@ footer p {
 .note {
   background: #fff;
   border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
+  box-shadow: 0 2px 5px #7c02ff97;
   padding: 10px;
   width: 240px;
   margin: 16px;
   float: left;
 }
 .note h1 {
+  color: #242424ea;
+  text-shadow: 0.8px 0.5px 0.5px #7c02ff97;
   font-size: 1.1em;
   margin-bottom: 6px;
 }
