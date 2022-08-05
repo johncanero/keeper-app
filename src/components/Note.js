@@ -14,17 +14,20 @@ const Note = () => {
   }
 
   // Map Function
-
+  const notesCard = (notes) => {
+      return ( <Card 
+          key={notes.id}
+          title={notes.title}
+          content={notes.content}
+      />
+      );
+  }
 
 
   return (
-    <div className="note">
-        <h1>This is the note title</h1>
-        <p>This is the note content</p>
+    <div>
+        {notes.map(notesCard)}
     </div>
-
-    // notes.map
-
   )
 }
 
