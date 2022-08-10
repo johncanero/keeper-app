@@ -1,36 +1,11 @@
-import notes from '../notes'
-
-
-const Note = () => {
-
-  // Props Function
-  const Card = (props) => {
-      return (
-          <div className='note'>
-              <h1>{props.title}</h1>
-              <p>{props.content}</p>
-          </div>
-      );
-  }
-
-  // Map Function
-  const notesCard = (notes) => {
-      return ( <Card 
-          key={notes.key}
-          title={notes.title}
-          content={notes.content}
-      />
-      );
-  }
-
-
+const Note = (props) => {
   return (
-    <div>
-        {notes.map(notesCard)}
-    </div>
+    <div className="note">
+        <h1>{props.title}</h1>
+        <p>{props.content}</p>
+        <button>DELETE</button>
+  </div>
   )
 }
 
-export default Note;
-
-console.log(notes);
+export default Note
