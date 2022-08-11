@@ -14,7 +14,6 @@ const App = () => {
 
   // 2. Pass the new note back to the App.
   // 4. Take array and render separate Note components for each item.
-
   const addNote = (newNote) => {
     setNotes(prevNotes => {
       return [...prevNotes, newNote];

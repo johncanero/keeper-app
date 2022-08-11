@@ -1,5 +1,6 @@
 const Footer = () => {
 
+  // Create a const named getCurrentYear and return a function to get the active year
   const getCurrentYear = () => {
     return new Date().getFullYear();
   };

@@ -50,6 +50,7 @@ const CreateArea = (props) => {
     <div>
         <form className="create-note">
 
+            {/* input */}
             {isExpanded ? <input 
                 name="title" 
                 onChange={handleChange} 
@@ -57,7 +58,8 @@ const CreateArea = (props) => {
                 placeholder="Title" 
             /> : null }
 
-         
+              
+            {/* textarea */}
             <textarea 
                 name="content" 
                 onClick={expand}
