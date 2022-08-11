@@ -1,5 +1,6 @@
 import { useState } from "react"
-import AddCircleIcon from '@mui/icons-material/AddCircle';
+import AddIcon from '@mui/icons-material/Add';
+import { Fab } from "@mui/material";
 
 const CreateArea = (props) => {
 
@@ -53,9 +54,12 @@ const CreateArea = (props) => {
                 rows="3"     
             />
 
-            <button onClick={submitNote}>
-                <AddCircleIcon />
-            </button>
+            {/* <button onClick={submitNote}>
+                <AddIcon />
+            </button> */}
+            <Fab onClick={submitNote}>
+                 <AddIcon />
+            </Fab>  
         </form>
     </div>
   )
