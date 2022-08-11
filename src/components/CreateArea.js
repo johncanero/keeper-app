@@ -1,6 +1,7 @@
 import { useState } from "react"
 import AddIcon from '@mui/icons-material/Add';
 import { Fab } from "@mui/material";
+import Zoom from '@mui/material/Zoom';
 
 const CreateArea = (props) => {
 
@@ -51,15 +52,17 @@ const CreateArea = (props) => {
                 onChange={handleChange} 
                 value={note.content} 
                 placeholder="Take a note..." 
-                rows="3"     
+                rows="3 "     
             />
 
-            {/* <button onClick={submitNote}>
-                <AddIcon />
-            </button> */}
-            <Fab onClick={submitNote}>
-                 <AddIcon />
-            </Fab>  
+            {/* Material Zoom API and Fab Button */}
+            <Zoom in={true}>
+                 {/* <button onClick={submitNote}>
+                <AddIcon /></button> */}
+                <Fab onClick={submitNote}>
+                    <AddIcon />
+                </Fab>  
+            </Zoom>
         </form>
     </div>
   )
