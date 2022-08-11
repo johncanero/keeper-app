@@ -37,7 +37,7 @@ const App = () => {
 
 
   return (
-    <div className="App">
+    <div>
         <Header />
         <CreateArea 
             onAdd={addNote}
