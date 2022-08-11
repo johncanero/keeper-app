@@ -1,4 +1,5 @@
 import { useState } from "react"
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 const CreateArea = (props) => {
 
@@ -52,7 +53,9 @@ const CreateArea = (props) => {
                 rows="3"     
             />
 
-            <button onClick={submitNote}>Add</button>
+            <button onClick={submitNote}>
+                <AddCircleIcon />
+            </button>
         </form>
     </div>
   )
