@@ -5,6 +5,10 @@ import Zoom from '@mui/material/Zoom';
 
 const CreateArea = (props) => {
 
+  // Expanding the Card 
+  const [isExpanded, setExpanded] = useState(false);
+
+
   // 1. Create a constant that keeps track of the title and content.
   const [note, setNote] = useState({
     title: "",
@@ -38,25 +42,33 @@ const CreateArea = (props) => {
   }
 
 
+  const expand = () => {
+    setExpanded(true);
+  }
+
   return (
     <div>
         <form className="create-note">
-            <input 
+
+            {isExpanded ? <input 
                 name="title" 
                 onChange={handleChange} 
                 value={note.title} 
                 placeholder="Title" 
-            />
+            /> : null }
+
+         
             <textarea 
                 name="content" 
+                onClick={expand}
                 onChange={handleChange} 
                 value={note.content} 
                 placeholder="Take a note..." 
-                rows="3 "     
+                rows={isExpanded ? 3 : 1}     
             />
 
             {/* Material Zoom API and Fab Button */}
-            <Zoom in={true}>
+            <Zoom in={isExpanded}>
                  {/* <button onClick={submitNote}>
                 <AddIcon /></button> */}
                 <Fab onClick={submitNote}>
