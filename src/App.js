@@ -21,6 +21,21 @@ const App = () => {
     })
   }
 
+
+  //5. Implement the delete note functionality.
+  //- Callback from the Note component to trigger a delete function.
+  //- Use the filter function to filter out the item that needs deletion.
+  const deleteNote = (id) => {
+      // console.log("Delete was triggered")
+
+      setNotes(prevNotes => {
+          return prevNotes.filter((noteItem, index) => {
+            return index !== id;
+        });
+      });
+  }
+
+
   return (
     <div className="App">
         <Header />
@@ -28,11 +43,17 @@ const App = () => {
             onAdd={addNote}
         />
         
-        {notes.map((noteItem) => {
-          return <Note 
-            title={noteItem.title}
-            content={noteItem.content}
+        {/* // 6.- Pass a id over to the Note component, pass it back to the App when deleting. */}
+        {notes.map((noteItem, index) => {
+          return ( 
+            <Note 
+              key={index}
+              id={index}
+              title={noteItem.title}
+              content={noteItem.content}
+              onDelete={deleteNote}
           />
+          )
         })}
         
         <Footer />

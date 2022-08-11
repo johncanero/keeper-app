@@ -23,8 +23,14 @@ const CreateArea = (props) => {
   // 2. Pass the new note back to the App.
   // - Prevent Re-Loading of the Page
   // - Add new note to an array.
+
+  // 7. Clear Out the title and content after Adding
   const submitNote = (event) => {
     props.onAdd(note);
+    setNote({
+      title: "",
+      content: ""
+    })
     event.preventDefault();
   }
 
