@@ -9,7 +9,7 @@ const CreateArea = () => {
 
 
   function handleChange(event) {
-    const [name, value] = event.target.value;
+    const {name, value} = event.target;
 
     setNote(prevNote => {
       return {
@@ -25,7 +25,8 @@ const CreateArea = () => {
         <input 
             name="title" 
             onChange={handleChange} 
-            value={note.title} placeholder="Title" 
+            value={note.title} 
+            placeholder="Title" 
         />
         <textarea 
             name="content" 
@@ -40,7 +41,7 @@ const CreateArea = () => {
   )
 }
 
-export default CreateArea
+export default CreateArea;
 
 
 //CHALLENGE:
