@@ -10,7 +10,6 @@ const Note = (props) => {
 
 export default Note
 
-//CHALLENGE:
 //2. Implement the delete note functionality.
 //- Callback from the Note component to trigger a delete function.
 //- Use the filter function to filter out the item that needs deletion.
