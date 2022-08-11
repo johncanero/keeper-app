@@ -1,7 +1,8 @@
 import { useState } from "react"
 
-const CreateArea = () => {
+const CreateArea = (props) => {
 
+  // 1. Create a constant that keeps track of the title and content.
   const [note, setNote] = useState({
     title: "",
     content: ""
@@ -17,6 +18,14 @@ const CreateArea = () => {
         [name]: value
       };
     });
+  }
+
+  // 2. Pass the new note back to the App.
+  // - Prevent Re-Loading of the Page
+  // - Add new note to an array.
+  const submitNote = (event) => {
+    props.onAdd(note);
+    event.preventDefault();
   }
 
 
@@ -36,7 +45,7 @@ const CreateArea = () => {
             rows="3"     
         />
 
-        <button>Add</button>
+        <button onClick={submitNote}>Add</button>
   </form>
   )
 }
@@ -44,9 +53,3 @@ const CreateArea = () => {
 export default CreateArea;
 
 
-//CHALLENGE:
-//1. Implement the add note functionality.
-//- Create a constant that keeps track of the title and content.
-//- Pass the new note back to the App.
-//- Add new note to an array.
-//- Take array and render separate Note components for each item.
