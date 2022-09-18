@@ -116,6 +116,16 @@ form.create-note button {
   html {
     position: fixed;
   }
+
+  footer {
+    position: fixed;
+  }
+
+  form.create-note button {
+    position: absolute;
+    right: 110px;
+  }
+  
 }
 
 
