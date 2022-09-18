@@ -32,7 +32,7 @@ It is made with React JS utilizing the State Hook and Props in React. Flash Ligh
 
 🪟: [Desktop - Tablet - Mobile]
 
-![Desktop View - To Do List](./src/images/desktopView.png)
-![Tablet View - To Do List](./src/images/tabletView.png)
-![Mobile View - To Do List](./src/images/mobileView.png)
-![Code View - To Do List](./src/images/codeView.png)
+![Desktop View - Keeper App](./src/images/desktopView.png)
+![Tablet View - Keeper App](./src/images/tabletView.png)
+![Mobile View - Keeper App](./src/images/mobileView.png)
+![Code View - Keeper App](./src/images/codeView.png)
